@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "a0cb838c-7d32-4dfe-9521-52b814f8bd57",
+		"name": "rest-api-json-filter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26017644"
+	},
+	"item": [
+		{
+			"name": "GET-Customer-by-id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "102",
+						"type": "text"
+					},
+					{
+						"key": "requested_fields",
+						"value": "id,firstName,lastname",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"emailAddress\": \"osman@gmail.com\",\r\n\t\"firstName\": \"Osman\",\r\n\t\"lastName\": \"Haider\",\r\n\t\"phoneNumber\": \"6475151000\",\r\n\t\"ssn\": \"121-345-9028\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Customer-by-id-all-fields",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "102",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "requested_fields",
+						"value": "id,firstName,lastName,phoneNumber,emailAddress,ssn",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"emailAddress\": \"osman@gmail.com\",\r\n\t\"firstName\": \"Osman\",\r\n\t\"lastName\": \"Haider\",\r\n\t\"phoneNumber\": \"6475151000\",\r\n\t\"ssn\": \"121-345-9028\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1"
+					],
+					"query": [
+						{
+							"key": "requested_fields",
+							"value": "id,firstName,lastName,phoneNumber,emailId,ssn",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-Customer-by-id-query-params",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "102",
+						"type": "text"
+					},
+					{
+						"key": "requested_fields",
+						"value": "id,firstName,lastname",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"emailAddress\": \"osman@gmail.com\",\r\n\t\"firstName\": \"Osman\",\r\n\t\"lastName\": \"Haider\",\r\n\t\"phoneNumber\": \"6475151000\",\r\n\t\"ssn\": \"121-345-9028\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
