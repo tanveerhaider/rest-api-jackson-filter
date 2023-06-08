@@ -44,7 +44,7 @@ public class CustomerController {
     }
 
     @GetMapping
-    public MappingJacksonValue findByemailId(@RequestParam("id") long id, @RequestParam("requested_fields") String fields) {
+    public MappingJacksonValue findById(@RequestParam("id") long id, @RequestParam("requested_fields") String fields) {
         log.info(" id {} and RequestFields {}", id, fields);
         String[] res = fields.split(",");
         Optional<CustomerEntity> customerById = customerService.findById(id);
